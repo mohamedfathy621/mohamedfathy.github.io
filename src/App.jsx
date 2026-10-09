@@ -23,7 +23,6 @@ function App() {
 
   const imagesLoaded = useImagePreloader(imagesToPreload);
   useEffect(() => {
-    console.log(imagesLoaded);
     if (imagesLoaded) {
       setTimeout(() => {
         setMainDisplay(true);
@@ -39,11 +38,10 @@ function App() {
         <div className="min-w-screen min-h-screen flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 1, 1, 0] }}
+            animate={{ opacity: 1 }}
             transition={{
               duration: 3,
               delay: 1,
-              times: [0, 0.33, 0.8, 1],
             }}
             className="flex justify-center"
           >
