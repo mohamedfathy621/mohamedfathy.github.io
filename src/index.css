@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+#root {
+  min-width: 100svh;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
