@@ -7,22 +7,38 @@ export default function useImagePreloader(imageUrls) {
     let cancelled = false;
 
     async function preloadImages() {
+      setLoaded(false);
+
       await Promise.all(
-        imageUrls.map(
-          (url) =>
-            new Promise((resolve) => {
-              const img = new Image();
+        imageUrls.map(async (url) => {
+          const img = new Image();
+          img.src = url;
+
+          try {
+            // Wait until the image finishes loading.
+            await new Promise((resolve, reject) => {
+              if (img.complete) {
+                img.naturalWidth > 0 ? resolve() : reject();
+                return;
+              }
 
               img.onload = resolve;
-              img.onerror = resolve; // Don't block forever if one fails
-              img.src = url;
+              img.onerror = reject;
+            });
 
-              if (img.complete) resolve();
-            }),
-        ),
+            // Wait until the image is decoded and ready to render.
+            if (img.decode) {
+              await img.decode();
+            }
+          } catch {
+            console.error("Failed to preload image:", url);
+          }
+        }),
       );
 
-      if (!cancelled) setLoaded(true);
+      if (!cancelled) {
+        setLoaded(true);
+      }
     }
 
     preloadImages();
