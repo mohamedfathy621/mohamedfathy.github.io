@@ -25,7 +25,7 @@ function WelcomeScreen() {
             }}
           >
             <img
-              src={frame === 0 ? "/wave1.png" : "/wave2.png"}
+              src={frame === 0 ? "wave1.png" : "wave2.png"}
               className="w-[460.8px] h-[307.2px]"
               style={{ imageRendering: "pixelated" }}
             />
@@ -45,7 +45,7 @@ function WelcomeScreen() {
                 transition={{ duration: 6, delay: 2 }}
               >
                 <img
-                  src="/falling-avatar.png"
+                  src="falling-avatar.png"
                   className="w-[120px] h-[90px]"
                   style={{ imageRendering: "pixelated" }}
                 ></img>
