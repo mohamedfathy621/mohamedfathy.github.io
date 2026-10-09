@@ -45,7 +45,7 @@ function WelcomeScreen() {
                 transition={{ duration: 6, delay: 2 }}
               >
                 <img
-                  src="falling-avatar.png"
+                  src="/falling-avatar.png"
                   className="w-[120px] h-[90px]"
                   style={{ imageRendering: "pixelated" }}
                 ></img>
