@@ -45,7 +45,7 @@ function App() {
             }}
             className="flex justify-center"
           >
-            <h1 className=" font-bold text-8xl"> LOADING</h1>
+            <h1 className=" font-bold text-base  lg:text-8xl"> LOADING</h1>
           </motion.div>
         </div>
       ) : (

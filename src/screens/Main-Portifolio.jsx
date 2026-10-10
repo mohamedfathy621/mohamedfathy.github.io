@@ -73,7 +73,7 @@ function MainPortifolio() {
   }, [handleSectionTop]);
 
   return (
-    <div className="grid grid-cols-2 gap-40 px-[15%] py-[5%]">
+    <div className="grid grid-cols-2 gap-5 md:gap-40 px-[5%] py-[5%]">
       <ProfileFloaterSection>
         <div className="flex flex-col gap-4 mb-10">
           {glossary.map((section) => {
@@ -84,10 +84,10 @@ function MainPortifolio() {
                 onClick={() => handleSectionSelection(section.ref)}
               >
                 <div
-                  className={`h-0 p-0 ${section.name === currentSection ? "w-16 border-gray-700" : "w-8 border-gray-400"}  transition-all duration-100 border group-hover:w-16 group-hover:border-gray-700`}
+                  className={`h-0 p-0 ${section.name === currentSection ? " w-8 md:w-16 border-gray-700" : " w-4 md:w-8 border-gray-400"}  transition-all duration-100 border group-hover:w-16 group-hover:border-gray-700`}
                 ></div>
                 <h1
-                  className={`${section.name === currentSection ? "text-xl font-semibold" : "text-lg font-normal"} transition-colors duration-100 group-hover:text-xl group-hover:font-semibold`}
+                  className={`${section.name === currentSection ? "text-base md:text-xl font-semibold" : "text-xs md:text-lg font-normal"} transition-colors duration-100 group-hover:text-xl group-hover:font-semibold`}
                 >
                   {section.name}
                 </h1>
@@ -97,7 +97,7 @@ function MainPortifolio() {
         </div>
         <FloaterIcon currentSection={currentSection}></FloaterIcon>
       </ProfileFloaterSection>
-      <div className="flex flex-col gap-35 col-start-2">
+      <div className="flex flex-col gap-20 md:gap-35 col-start-2">
         <div ref={aboutRef} className="scroll-mt-20">
           <AboutSection />
         </div>
@@ -114,7 +114,7 @@ function MainPortifolio() {
           <ProjectSection />
         </div>
 
-        <div ref={techStackRef}>
+        <div ref={techStackRef} className="scroll-mt-20 md:scroll-mt-0">
           <TechStackSection />
         </div>
       </div>

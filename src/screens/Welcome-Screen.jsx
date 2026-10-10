@@ -46,7 +46,7 @@ function WelcomeScreen() {
               >
                 <img
                   src="falling-avatar.png"
-                  className="w-[120px] h-[90px]"
+                  className="w-[60px] md:w-[120px] h-[45px] md:h-[90px]"
                   style={{ imageRendering: "pixelated" }}
                 ></img>
               </motion.div>
@@ -63,7 +63,7 @@ function WelcomeScreen() {
             }}
             className="flex justify-center"
           >
-            <h1 className=" font-bold text-8xl"> Welcome</h1>
+            <h1 className=" font-bold text-2xl md:text-8xl"> Welcome</h1>
           </motion.div>
         </div>
       </div>
