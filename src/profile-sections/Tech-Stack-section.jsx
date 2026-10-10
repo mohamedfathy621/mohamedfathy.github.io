@@ -1,7 +1,7 @@
 function TechStackSection() {
   return (
     <div className="flex flex-col gap-2 md:gap-8">
-      <h1 className="text-base font-semibold mb-2">FRONT-END</h1>
+      <h1 className="text-base md:text-xl font-semibold mb-2">FRONT-END</h1>
 
       <div className="flex flex-wrap gap-2 mb-4">
         <div className="border rounded-2xl text-xs md:text-base px-1.5 py-0.5">
@@ -35,7 +35,7 @@ function TechStackSection() {
           Bootstrab CSS
         </div>
       </div>
-      <h1 className="text-base font-semibold mb-2">BACK-END</h1>
+      <h1 className="text-base md:text-xl font-semibold mb-2">BACK-END</h1>
 
       <div className="flex flex-wrap gap-2 mb-4">
         <div className="border rounded-2xl text-xs md:text-base px-1.5 py-0.5">
@@ -69,7 +69,7 @@ function TechStackSection() {
           REDIS
         </div>
       </div>
-      <h1 className="text-base font-semibold mb-2">DEVOPS</h1>
+      <h1 className="text-base md:text-xl font-semibold mb-2">DEVOPS</h1>
 
       <div className="flex flex-wrap gap-2 mb-4">
         <div className="border rounded-2xl text-xs md:text-base px-1.5 py-0.5">

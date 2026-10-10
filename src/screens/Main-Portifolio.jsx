@@ -73,7 +73,7 @@ function MainPortifolio() {
   }, [handleSectionTop]);
 
   return (
-    <div className="grid grid-cols-2 gap-5 md:gap-40 px-[5%] py-[5%]">
+    <div className="grid grid-cols-2 gap-5 md:gap-40 px-[5%] md:px-[15%] py-[5%]">
       <ProfileFloaterSection>
         <div className="flex flex-col gap-4 mb-10">
           {glossary.map((section) => {
